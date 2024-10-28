@@ -1,0 +1,2 @@
+# korki-dla-noobkow
+sigma
