@@ -4,3 +4,5 @@ zrob quiz o grach komputerowych w php,css i html 15 pytan. Stwórz osobne strony
 Losowana kolejność pytań/odpowiedzi (kazda sesja losuje kolejność pytań i odpowiedzi)
 Klasyczny layout (centralna kolumna z marginesami, pytania wyrównane do lewej, warunkowe przyciski nawigacji)
 Obrazy w niektórych pytaniach
+
+Zadanie
