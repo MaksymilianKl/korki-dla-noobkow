@@ -41,9 +41,29 @@ p<!DOCTYPE html>
 
         $tresc = substr($pytania[$i], $tStart , $Finale);
 
-        echo '<textarea>' . $tresc . "</textarea>";
+        echo '<textarea>' . $pytanie . "</textarea>";
         echo '<section>' . $tresc;
         echo '<ol type="A">';
+
+        //odp.A
+
+            $odpAEnd = strpos($pytanie, '<div id="odpb');
+            $odpAStart = strpos($pytanie, 'A. </strong>');
+            
+
+        $odpA = substr($pytanie, $odpAStart + 12, $odpAEnd - $odpAStart - 18);
+
+        echo "<li>";
+        
+        // echo "<textarea>" . $odpA . "</textarea>";
+
+        echo $odpA;
+        echo "</li>";
+        
+        //odp.B
+
+
+
         echo '<li>'.'qqq'.'</li>';
         echo '<li>'.'Lorem'.'</li>';
         echo '</ol>';
