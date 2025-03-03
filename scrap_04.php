@@ -47,14 +47,14 @@ p<!DOCTYPE html>
 
         //odp.A
 
-            $odpAEnd = strpos($pytanie, '<div id="odpb');
-            $odpAStart = strpos($pytanie, 'A. </strong>');
+        $odpAStart = strpos($pytanie, 'A. </strong>');
+        $odpAEnd = strpos($pytanie, '<div id="odpb');
             
 
         $odpA = substr($pytanie, $odpAStart + 12, $odpAEnd - $odpAStart - 18);
 
         echo "<li>";
-        
+
         // echo "<textarea>" . $odpA . "</textarea>";
 
         echo $odpA;
@@ -62,10 +62,35 @@ p<!DOCTYPE html>
         
         //odp.B
 
+        $odpBStart = strpos($pytanie, 'B. </strong>');
+        $odpBEnd = strpos($pytanie, '<div id="odpc');
+            
+
+        $odpB = substr($pytanie, $odpBStart + 12, $odpBEnd - $odpBStart - 18);
+        echo "<li>" . $odpB . "</li>";
+
+        // odp.C
+        $odpCStart = strpos($pytanie, 'C. </strong>');
+        $odpCEnd = strpos($pytanie, '<div id="odpd');
+            
+
+        $odpC = substr($pytanie, $odpCStart + 12, $odpCEnd - $odpCStart - 18);
+        echo "<li>" . $odpC . "</li>";
+
+        // odp.D
+
+        $odpDStart = strpos($pytanie, 'D. </strong>');
+        $odpDEnd = strpos($pytanie, '</div>');
+        $odpD = substr($pytanie, $odpDStart + 12, -6);
+
+        echo "<li>" . $odpD . "</li>";
+        
+
+        
 
 
-        echo '<li>'.'qqq'.'</li>';
-        echo '<li>'.'Lorem'.'</li>';
+
+    
         echo '</ol>';
         echo "</section>";
         
