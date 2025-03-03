@@ -1,0 +1,13 @@
+<form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".html">
+        <button type="submit">Prześlij plik</button>
+    </form>
+
+<?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) 
+        $fileTmpPath = $_FILES['file']['tmp_name'];
+        $data = file_get_contents($fileTmpPath);
+    
+        echo "<textarea>" . htmlspecialchars($data) . "</textarea>";
+    
+        echo "<hr>";
